@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork(log-in)</title>
+    <style>
+        * {
+
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            background-color: white;
+            height: 70px;
+            top: 0px;
+            z-index: 999;
+            border-bottom: 0.1px solid lightgray;
+            padding: 10px;
+            padding-left: 245px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .logo {
+            width: 70px;
+        }
+
+        .main {
+            border: 0.5px solid rgb(206, 206, 206);
+            height: 400px;
+            width: 450px;
+            margin: 0 auto;
+            margin-top: 30px;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .main2 {
+            border: 0.5px solid rgb(206, 206, 206);
+            height: 150px;
+            width: 450px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            border-top: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .main h2 {
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: rgb(41, 41, 41);
+        }
+
+        .input {
+            border: 1px solid rgb(207, 207, 207);
+            width: 300px;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            gap: 10px;
+            border-radius: 10px;
+        }
+        .input:hover{
+            border: 1px solid #3c8224;;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            width: 280px;
+        }
+
+        .b1 {
+            height: 37px;
+            width: 300px;
+            background-color: #14a800;
+            color: white;
+            border: none;
+            border-radius: 20px;
+        }
+        .b1:hover{
+            background-color: #3c8224;
+        }
+        .a1{
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            height: 37px;
+            width: 300px;
+
+        }
+        .a2{
+            color: #14a800;
+            font-size: 14px;
+            text-decoration: none;
+            height: 37px;
+            width: 300px;
+
+        }
+
+        .b2 {
+            height: 37px;
+            width: 300px;
+            background-color: #438eff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            font-size: 14px;
+        }
+
+        .b3 {
+            height: 37px;
+            width: 300px;
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 20px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            font-size: 14px;
+
+        }
+
+        .b4 {
+            height: 37px;
+            width: 150px;
+            border: 1px solid #14a800;
+            color: #14a800;
+            background-color: transparent;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .b4:hover{
+            border: 1px solid #3c8224;
+            color: #3c8224;
+            background-color: rgb(242, 255, 255);
+        }
+
+        hr {
+            width: 300px;
+            margin-top: 10px;
+            background-color: grey;
+        }
+
+        .circle {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: white;
+            color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: -45px;
+        }
+
+        .circle2 {
+            height: 50px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            background-color: white;
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: -47px;
+            font-size: 13px;
+        }
+
+        img {
+            border-radius: 100%;
+            width: 35px;
+        }
+
+
+        footer {
+            background-color: #001e00;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            margin-top: 30px;
+            padding-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* position: sticky;
+            bottom: 0; */
+        }
+
+        footer ul {
+            margin-top: 20px;
+            font-size: 14px;
+            gap: 9px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        @media (max-width: 360px) {
+
+.main{
+    width: 340px;
+    height: auto;
+}
+.main2{
+    width: 340px;
+    height: auto;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+
+}
+footer ul {
+display: none;
+
+}
+
+.logo{
+width: 120px;
+margin-left: -200px;
+}
+.main h2{
+font-size: 30px;
+}
+
+footer .p{
+margin-top: -10px;
+font-size: 15px;
+color: white;
+}
+
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <a href="./upwork(landingpage).html"> <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 28" role="img" aria-hidden="true">
+            <path fill="#14a800"
+                d="M28.18,19.06A6.54,6.54,0,0,1,23,16c.67-5.34,2.62-7,5.2-7s4.54,2,4.54,5-2,5-4.54,5m0-13.34a7.77,7.77,0,0,0-7.9,6.08,26,26,0,0,1-1.93-5.62H12v7.9c0,2.87-1.3,5-3.85,5s-4-2.12-4-5l0-7.9H.49v7.9A8.61,8.61,0,0,0,2.6,20a7.27,7.27,0,0,0,5.54,2.35c4.41,0,7.5-3.39,7.5-8.24V8.77a25.87,25.87,0,0,0,3.66,8.05L17.34,28h3.72l1.29-7.92a11,11,0,0,0,1.36,1,8.32,8.32,0,0,0,4.14,1.28h.34A8.1,8.1,0,0,0,36.37,14a8.12,8.12,0,0,0-8.19-8.31">
+            </path>
+            <path fill="#14a800"
+                d="M80.8,7.86V6.18H77.2V21.81h3.65V15.69c0-3.77.34-6.48,5.4-6.13V6c-2.36-.18-4.2.31-5.45,1.87"></path>
+            <polygon fill="#14a800"
+                points="55.51 6.17 52.87 17.11 50.05 6.17 45.41 6.17 42.59 17.11 39.95 6.17 36.26 6.17 40.31 21.82 44.69 21.82 47.73 10.71 50.74 21.82 55.12 21.82 59.4 6.17 55.51 6.17">
+            </polygon>
+            <path fill="#14a800"
+                d="M67.42,19.07c-2.59,0-4.53-2.05-4.53-5s2-5,4.53-5S72,11,72,14s-2,5-4.54,5m0-13.35A8.1,8.1,0,0,0,59.25,14,8.18,8.18,0,1,0,75.6,14a8.11,8.11,0,0,0-8.18-8.31">
+            </path>
+            <path fill="#14a800"
+                d="M91.47,14.13h.84l5.09,7.69h4.11l-5.85-8.53a7.66,7.66,0,0,0,4.74-7.11H96.77c0,3.37-2.66,4.65-5.3,4.65V0H87.82V21.82h3.64Z">
+            </path>
+
+        </svg></a>
+    </nav>
+
+<form action="" method="get">
+    <div class="main">
+        <h2> Log in to Upwork</h2>
+        <div class="input"><svg xmlns="http://www.w3.org/2000/svg" style="width: 15px;" fill="gray" viewBox="0 0 14 14"
+                aria-hidden="true" role="img">
+                <path
+                    d="M7 8c-3.314 0-6 1.85-6 3.297v2.027c0 .373.358.676.8.676h10.4c.442 0 .8-.303.8-.676v-2.027C13 9.85 10.314 8 7 8zm3-5a3 3 0 11-6 0 3 3 0 016 0z">
+                </path>
+            </svg><input type="email"  placeholder="Username or Email" required></div>
+        <button type="submit" class="b1"><a href="./Upwork(password}clone.html" class="a1"> Continue with Email</a></button>
+        <hr>
+        <div class="circle">or</div>
+        <button class="b2"> <img src="./google-icon.svg" alt=""> Continue with Google</button>
+        <button class="b3">
+            <svg data-v-743fcce0="" data-v-0c7bde74="" width="2.8469mm" height="4.7625mm" version="1.1"
+                viewBox="0 0 3.8469 4.7625" xmlns="http://www.w3.org/2000/svg">
+                <g data-v-743fcce0="" data-v-0c7bde74="" transform="translate(-64.345 -143.35)">
+                    <path data-v-743fcce0="" data-v-0c7bde74=""
+                        d="m65.3 148.04c-0.28391-0.17313-0.67141-0.76332-0.84045-1.2801-0.08795-0.26886-0.11025-0.42084-0.11353-0.77372-5e-3 -0.53416 0.07013-0.78453 0.32071-1.0692 0.32908-0.37386 0.80475-0.48983 1.2754-0.31094 0.28741 0.10923 0.40289 0.10558 0.79215-0.0251 0.25755-0.0864 0.3669-0.10301 0.53413-0.0809 0.27892 0.0369 0.51512 0.14539 0.6838 0.31406l0.138 0.138-0.15036 0.12394c-0.35848 0.29549-0.46412 0.84523-0.24639 1.2822 0.09783 0.19631 0.33073 0.42321 0.48834 0.47574 0.07682 0.0256-0.27148 0.68647-0.49609 0.94128-0.31615 0.35864-0.47304 0.40634-0.86417 0.26274-0.38534-0.14149-0.49243-0.14492-0.83466-0.0268-0.37222 0.12848-0.51369 0.13441-0.68687 0.0288zm0.95956-3.6652c-0.04406-0.11481 0.09887-0.49259 0.25567-0.67578 0.14967-0.17485 0.45436-0.3477 0.61294-0.3477 0.08074 0 0.08756 0.0177 0.06932 0.17944-0.0488 0.43295-0.36807 0.79774-0.77487 0.88535-0.10672 0.0229-0.14178 0.0141-0.16305-0.0413z">
+                    </path>
+                </g>
+            </svg> Continue with Apple
+        </button>
+    </div>
+    <div class="main2">
+        <hr>
+        <div class="circle2">Don't have an Upwork Account?</div>
+        <button class="b4"><a href="./Upwowk-sign-up(clone).html" class="a2">Sign up</a></button>
+    </div>
+</form>
+
+    <footer>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <p style="color: white; padding-right: 20px; font-size: 14px;">© 2015 - 2022 Upwork®
+                Global Inc.</p>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>
